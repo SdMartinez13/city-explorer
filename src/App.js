@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Display from './Display';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+
 
 
 class App extends React.Component {
@@ -34,7 +33,9 @@ class App extends React.Component {
     console.log(error, 'here is an error')
     this.setState({
       error: true,
-      errorMessage: `An error occured: ${error.response.status}`
+      // errorMessage: `An error occured: ${error.response.status}`,
+      errorMessage: `ERROR ${error.response.status}: Could not find ${this.state.city}`,
+      cityData: {}
     })
 
   }
