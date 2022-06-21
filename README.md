@@ -12,6 +12,6 @@ Estimate of time needed to complete: 5hrs
 
 Start time: 1430
 
-Finish time: 
+Finish time: 2350
 
-Actual time needed to complete: 
+Actual time needed to complete: 9hrs
