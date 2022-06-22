@@ -1,13 +1,13 @@
 import React from 'react';
-import Forcast from './Forcast';
+import Forecast from './Forecast';
 
 class Weather extends React.Component {
     render() {
         
-        console.log(this.props.data);
+        console.log(this.props.weatherData);
 
         let weather = this.props.weatherData.map((day, idx) => (
-            <Forcast
+            <Forecast
                 description={day.description}
                 key={idx}
                 city={this.props.city}
@@ -15,7 +15,17 @@ class Weather extends React.Component {
             />
         ))
         return (
-            [weather]
+            <div className="border-top py-4">
+                <h3>Weather</h3>
+
+                {!weather.length ? (
+                    <p>No Weather Available</p>
+                ) : (
+                    <ul className='list-unstyled '>
+                        {[weather]}
+                    </ul>
+                )}
+            </div>
         );
     }
 }

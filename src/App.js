@@ -23,11 +23,16 @@ class App extends React.Component {
 
     let cityInfo = await axios.get(url).catch(this.catch);
 
-    let cityForecast = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQueryCity=${this.state.city}`);
+    let cityForecast = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQueryCity=${this.state.city}`).catch(err => {
+      console.log(err);
+    });
 
-    let forecast = cityForecast.data;
+    let forecast = [];
+    if (!!cityForecast) {
+      forecast = cityForecast.data;
+    }
 
-    console.log(cityInfo);
+    console.log(forecast, 'forecast');
     if (!cityInfo) return
     this.setState({
       cityData: cityInfo.data[0],
@@ -70,11 +75,9 @@ console.log(this.state.weatherData);
           error={this.state.error}
           errorMessage={this.state.errorMessage}
           cityData={this.state.cityData}
+          weatherData={this.state.weatherData}
         /> 
-        <Weather
-        weatherData={this.state.weatherData}
-        city={this.state.city}
-        />
+        
       </>
   
   );
