@@ -14,7 +14,7 @@ console.log(this.props, 'props');
           {Object.keys(this.props.cityData).length > 0 && (
             <img
               alt={this.props.cityData.display_name}
-              src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.cityData.lat},${this.props.cityData.lon}&size=600x600&zoom=10`}
+              src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.cityData.lat},${this.props.cityData.lon}&zoom=10`}
             />
           )}
         </div>
