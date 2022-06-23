@@ -7,8 +7,16 @@ class Forcast extends React.Component {
         return (
        
                 <li className='py-2'>
-                  <p className='p-0 m-0 '>{this.props.day.date}</p> 
-                  <p className='p-0 m-0 h3'>{this.props.day.description}</p>
+
+                <div className='border-top w-25 bg-white'/>
+
+                  <p className='p-1 m-0'>{this.props.day.date}</p>
+                  <p>Current Temp: {this.props.day.temp}º</p> 
+                  <p className='p-1 m-0 h4'>{this.props.day.description}</p>
+                  <p>High: {this.props.day.max_temp}º Low: {this.props.day.min_temp}º </p> 
+
+                
+
                 </li>
 
               

@@ -8,19 +8,19 @@ class Display extends React.Component {
   render () {
 console.log(this.props, 'props');
     return (
-      <div className='d-flex overflow-scroll h-100'>
+      <div className='d-flex h-100' style={{textAlign:'left',overflow:'scroll'}}>
 
-        <div className='d-flex justify-content-center align-items-center' style={{background: '#A0C8F0', width: '67%', height:'100vh'}}>
+        <div className='d-flex justify-content-center align-items-center' style={{background: '#A0C8F0', width: '67%', height:'auto'}}>
           {Object.keys(this.props.cityData).length > 0 && (
             <img
               alt={this.props.cityData.display_name}
-              src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.cityData.lat},${this.props.cityData.lon}&zoom=10`}
+              src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.cityData.lat},${this.props.cityData.lon}&size=600x600&zoom=10`}
             />
           )}
         </div>
 
 
-        <div className='px-5 py-3 text-light'style={{background: '#3E688A', width: '33%', height:'100vh'}}>
+        <div className='px-5 py-3 text-light'style={{background: '#3E688A', width: '33%', height:'fit-content'}}>
           <h1>City Explorer</h1>
           <Forms
             handleCityInput={this.props.handleCityInput}

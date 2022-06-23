@@ -8,6 +8,8 @@
 
 * ![WRRC](./public/drawing3.png)
 
+* ![WRRC](./public/drawing4.png)
+
 ## Time Estimmates
 
 Name of feature: Create City Explorer app, api, and read me
@@ -43,6 +45,18 @@ Start time: 1430
 Finish time: 2300
 
 Actual time needed to complete: 9hrs
+
+----
+
+Name of feature: created weather/movies component displaying day weather and movies for city searched
+
+Estimate of time needed to complete: 5hrs
+
+Start time: 1300
+
+Finish time: 1600
+
+Actual time needed to complete: 3hrs
 
 
 
