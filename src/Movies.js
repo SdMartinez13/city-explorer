@@ -8,14 +8,14 @@ class Movies extends React.Component {
   render() {
     return(
       <div className="border-top py-4">
-        <h3>Movies</h3>
+        <h3>Movies about your city of choice: </h3>
         <div className='d-flex flex-wrap'>
       {
         this.props.movie.map((movie, idx) => (
 
 
         <Col className='mt-3'> 
-          <Card style={{width:'18rem'}} className='h-75 card container' key={idx}>
+          <Card style={{width:'18rem'}} className='h-100 card container' key={idx}>
             <Card.Body>
               <Card.Img 
                 className='card-image p-3'
