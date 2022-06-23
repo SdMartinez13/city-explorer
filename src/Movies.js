@@ -7,9 +7,11 @@ import './App.css'
 class Movies extends React.Component {
   render() {
     return(
-      <>
+      <div className="border-top py-4">
+        <h3>Movies</h3>
+        <div className='d-flex flex-wrap'>
       {
-        this.props.movie.map((movie,idx) => (
+        this.props.movie.map((movie, idx) => (
 
 
         <Col className='mt-3'> 
@@ -42,7 +44,8 @@ class Movies extends React.Component {
         </Col>
     
         ))}
-      </>
+        </div>
+      </div>
 
     );
   }

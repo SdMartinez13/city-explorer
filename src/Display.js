@@ -8,7 +8,7 @@ class Display extends React.Component {
   render () {
 console.log(this.props, 'props');
     return (
-      <div className='d-flex'>
+      <div className='d-flex overflow-scroll h-100'>
 
         <div className='d-flex justify-content-center align-items-center' style={{background: '#A0C8F0', width: '67%', height:'100vh'}}>
           {Object.keys(this.props.cityData).length > 0 && (
@@ -36,7 +36,7 @@ console.log(this.props, 'props');
 
           {Object.keys(this.props.cityData).length > 0 && (
             <>
-              <ul className='list-unstyled '>
+              <ul className='list-unstyled'>
                 <li className='py-2'>
                   <p className='p-0 m-0 '>Latitude</p> <p className='p-0 m-0 h3'>{this.props.cityData.lat}</p>
                 </li>

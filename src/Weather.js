@@ -8,10 +8,10 @@ class Weather extends React.Component {
 
         let weather = this.props.weatherData.map((day, idx) => (
             <Forecast
-                description={day.description}
+                
                 key={idx}
                 city={this.props.city}
-                date={day.date}
+                day={day}
             />
         ))
         return (

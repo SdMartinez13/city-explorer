@@ -26,13 +26,30 @@ class App extends React.Component {
 
       let cityDataMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${data.data[0].lat},${data.data[0].lon}&zoom=14`
 
-      let cityForecast = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQueryCity=${this.state.city}`);
+      // let cityForecast = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQueryCity=${this.state.city}`);
+
+
+      // get lat & lon from data on line 25
+      console.log(data, 'data from locationiq api')
+
+      // data should have lat lon on it. aka data.data[0].lat & data.data[0].lon
+
+      const { lon, lat } = data.data[0];
+
+      console.log(lat, lon) // lat lon from location api
+
+      const cityForecast = await axios.get(`${process.env.REACT_APP_SERVER}/weather?lat=${lat}&lon=${lon}`);
+
+      console.log(cityForecast, 'new weather request')
+
+
+
+
       let forecast = cityForecast.data;
       console.log(cityForecast);
       let url = `${process.env.REACT_APP_SERVER}/movies?movieQueryCity=${this.state.city}`
       let cityMovie = await axios.get(url);
       let movieData = cityMovie.data
-
 
 
       this.setState ({
@@ -126,18 +143,16 @@ render(){
           cityData={this.state.cityData}
           weatherData={this.state.weatherData}
         /> 
-        {this.state.weatherData.length && 
-          <Weather
-            weatherData={this.state.weatherData}
-            city={this.state.city}
-          />
-        }
+        
+        
 
-        {this.state.movieArray.length &&
-          <Movies
-            movie={this.state.movieArray}
-          />
-        }
+          {this.state.movieArray.length &&
+            <Movies
+              movie={this.state.movieArray}
+            />
+          }
+
+        
       </>
   
   );
