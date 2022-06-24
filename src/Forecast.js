@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Container, Card } from 'react-bootstrap';
 
-class Forcast extends React.Component {
+class Forecast extends React.Component {
     render(){
         console.log(this.props);
         return (
@@ -39,4 +39,4 @@ class Forcast extends React.Component {
     // }
 }
 
-export default Forcast;
+export default Forecast;
