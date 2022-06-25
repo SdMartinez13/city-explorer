@@ -14,8 +14,8 @@ class Movies extends React.Component {
         this.props.movie.map((movie, idx) => (
 
 
-        <Col className='mt-3'> 
-          <Card style={{width:'18rem'}} className='h-100 card container' key={idx}>
+        <Col className='mt-3' key={idx}> 
+          <Card style={{width:'18rem'}} className='h-100 card container'>
             <Card.Body>
               <Card.Img 
                 className='card-image p-3'

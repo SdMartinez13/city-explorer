@@ -6,7 +6,7 @@ import Weather from './Weather';
 
 class Display extends React.Component {
   render () {
-console.log(this.props, 'props');
+// console.log(this.props, 'props');
     return (
       <div className='d-flex h-100' style={{textAlign:'left',overflow:'scroll'}}>
 
