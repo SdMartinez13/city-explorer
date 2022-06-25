@@ -10,6 +10,8 @@
 
 * ![WRRC](./public/drawing4.png)
 
+* ![WRRC](./public/drawing5.png)
+
 ## Time Estimmates
 
 Name of feature: Create City Explorer app, api, and read me
@@ -57,6 +59,18 @@ Start time: 1300
 Finish time: 1600
 
 Actual time needed to complete: 3hrs
+
+----
+
+Name of feature: lab10 debugging
+
+Estimate of time needed to complete: 5hrs
+
+Start time: 1600
+
+Finish time: 2330
+
+Actual time needed to complete: 7 1/2 hours
 
 
 
