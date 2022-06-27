@@ -53,7 +53,7 @@ class App extends React.Component {
     console.log(url);
     let cityMovie = await axios.get(url);
     let movieData = cityMovie.data
-
+    console.log(movieData, 'here is my movie data');
     this.setState({
       movieArray: movieData
 
