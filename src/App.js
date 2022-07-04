@@ -25,7 +25,7 @@ class App extends React.Component {
 
       this.handleLocation();
 
-      // this.handleWeather();
+      this.handleWeather();
 
       this.handleMovies();
 
@@ -49,9 +49,9 @@ class App extends React.Component {
 
   };
   handleMovies = async (e) => {
-    let url = `${process.env.REACT_APP_SERVER}/movie?searchQueryCity=${this.state.city}`
-    console.log(url);
-    let cityMovie = await axios.get(url);
+    // let url = `${process.env.REACT_APP_SERVER}/movie?searchQueryCity=${this.state.city}`
+    // console.log(url);
+    let cityMovie = await axios.get(`${process.env.REACT_APP_SERVER}/movie?searchQueryCity=${this.state.city}`);
     let movieData = cityMovie.data
     console.log(movieData, 'here is my movie data');
     this.setState({
